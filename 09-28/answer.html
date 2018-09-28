@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        .green {
+            background: green;
+        }
+        .red {
+            background: red
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+<script> 
+    var content = document.querySelector('#content'); // 获取容器元素
+    var liList = ''; // 设置dom字符串拼接
+    for(var i = 0;i<10;i++) {
+        var className = i%2== 0? 'green' : 'red'; // 设置样式
+        liList += '<li class=' +className+ '>' + i + '</li>'; // 拼接字符串
+    }
+    console.log(liList);
+    content.innerHTML = liList; // 写入容器
+</script>
+</html>
