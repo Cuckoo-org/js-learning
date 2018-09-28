@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>for循环列表</title>
-    <style>ul li{list-style: none;
-    width: 200px;height: 50px;
-    line-height: 50px;text-align: center;
-    margin: 10px;
-    border: 1px solid red;
-    }
+    <style>
+    .green {
+            background: green;
+        }
+        .red {
+            background: red
+        }
 
     </style>
 </head>
 <body>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-     </ul>
+    <div id="content"></div>
+    
 <script>
-for(i=1;i<8;i++){
- if(i%2==0){
+var content = document.querySelector('#content'); // 获取容器元素
+    var liList = ''; // 设置dom字符串拼接
+    for(var i = 0;i<10;i++) {
+        var className = i%2== 0? 'green' : 'red'; // 设置样式
+        liList += '<li class=' +className+ '>' + i + '</li>'; // 拼接字符串
+    }
+    console.log(liList);
+    content.innerHTML = liList; // 写入容器
+    var li=document.getElementsByTagName("li");
+   for(var i = 0; i<li.length; i++){
+        li[i].onclick = function(n){
+    　　　　return function(){
+                alert("下标索引值为："+n);    //    索引值从0开始
+            }
+    　　}(i)
+    }
 
- }
- console.log(i);
-}
+
 
 </script>
 </body>
