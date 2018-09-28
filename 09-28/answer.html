@@ -26,5 +26,17 @@
     }
     console.log(liList);
     content.innerHTML = liList; // 写入容器
+
+    
+    var liDomList = document.querySelectorAll('li');
+    for(var m = 0;m<liDomList.length;m++) {
+         ~function(x) {// 建立闭包
+             console.log(m,x)
+            return liDomList[m].onclick = function() { // 使用闭包
+                alert(x)
+            }
+        }(m)
+    }
+// https://blog.csdn.net/clh386/article/details/78560002?locationNum=3&fps=1
 </script>
 </html>
