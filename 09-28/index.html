@@ -18,25 +18,86 @@
 <body>
     <div id="content"></div>
     
+    
 <script>
-var content = document.querySelector('#content'); // 获取容器元素
-    var liList = ''; // 设置dom字符串拼接
-    for(var i = 0;i<10;i++) {
-        var className = i%2== 0? 'green' : 'red'; // 设置样式
-        liList += '<li class=' +className+ '>' + i + '</li>'; // 拼接字符串
-    }
-    console.log(liList);
-    content.innerHTML = liList; // 写入容器
-    var li=document.getElementsByTagName("li");
-   for(var i = 0; i<li.length; i++){
-        li[i].onclick = function(n){
-    　　　　return function(){
-                alert("下标索引值为："+n);    //    索引值从0开始
-            }
-    　　}(i)
-    }
+// var content = document.querySelector('#content'); // 获取容器元素
+//     var liList = ''; // 设置dom字符串拼接
+//     for(var i = 0;i<10;i++) {
+//         var className = i%2== 0? 'green' : 'red'; // 设置样式
+//         liList += '<li class=' +className+ '>' + i + '</li>'; // 拼接字符串
+//     }
+//     console.log(liList);
+//     content.innerHTML = liList; // 写入容器
+//     var li=document.getElementsByTagName("li");
+//    for(var i = 0; i<li.length; i++){
+//         li[i].onclick = function(n){
+//     　　　　return function(){
+//                 alert("下标索引值为："+n);    //    索引值从0开始
+//             }
+//     　　}(i)
+//     }
+ 
+//  var bag ="yo";
+//  bag=1;
+//  bag=('yo');
+//  bag={}
+//  bag=[]
 
+//  console.log(typeof bag)
+// var count=101;
+// var i=0;
+// for(;i<count;){
+// alert(i);
+// i++;
+// }for循环
+// for (var propName in window) {
+//     document,write(propName);
+// }
+//  var num=10;
+//  for (var i=0;i<num;i++){
+//      alert(i)
+//  }
+// var num=0;
 
+// for (var i =1; i < 10;i++){
+//     if(i % 5==0){
+//         break;
+//     }
+//     num++;
+// }
+// alert(num);break 语句；
+// var num = 0;
+// for(var i =1;i<10;i++){
+//     if(i % 5 ==0){
+//         continue;
+//     }
+//     num++;
+// }
+// alert(num);
+// var num = 0;
+
+// outermost:
+// for(var i =0;i<10;i++){
+//     for (var j =0;j<10;j++){
+//         if (i ==5 && j == 5){
+//             break outermost;
+//         }
+//         num++;
+//     }
+// }
+// alert(num);
+// var num =0;
+
+// outermost:
+// for(var i =0;i<10;i++){
+//     for(var j=0;j<10;j++){
+//         if(i == 5 && j == 5){
+//             continue outermost;
+//         }
+//         num++;
+//     }
+// }
+// alert(num);
 
 </script>
 </body>
