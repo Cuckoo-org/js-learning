@@ -7,3 +7,6 @@
 * DOM 操作，1，点击注册按钮获取form表单内对应的值 2，获取到的值转换成json
 * 提示如何获取对应的DOM，如何通过form表单的name获取对应的值
 * `<input name="uesrname" type="password"/>` 为什么需要添加`name`属性？
+
+## 10-10
+* 如何获取页面元素，有几种获取dom的方式
