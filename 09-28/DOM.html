@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查找HTML元素的方法</title>
+</head>
+<body>
+<!--1,通过id找到html元素；
+    2，通过标签名找到html元素；
+    3，通过类名找到html元素；
+-->
+<p id="intro">id方法找到html元素</p>
+<p>本例演示<b>getElementById</b>方法！</p>
+<script>
+x=document.getElementById("intro");
+document.write('<p>id="intro"的段落中的文本是：' + x.innerHTML +'</p>');
+</script>
+<p>标签名查找html元素</p>
+<div id="main">
+    <p>the dom is very useful.</p>
+    <p>本例演示<b>getElementsByTagName</b>方法。</p>
+</div>
+<script>
+var x=document.getElementById("main");
+var y=x.getElementsByTagName("p");
+document.write('is为"main"的div中的第一段文本是：'+y[0].innerHTML);
+</script><br>
+<script>
+document.write(Date());
+</script>
+
+</body>
+</html>

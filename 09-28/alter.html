@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript脚本修改</title>
+</head>
+<body>
+    <p id="p1">good day!</p>
+    <script>
+    document.getElementById("p1").innerHTML="NEW way"
+    </script>
+    <p>上面的段落被一条javaScript脚本修改了。</p>
+    <h1 id="header">old Header</h1>
+    <script>
+    var element=document.getElementById("header");
+    element.innerHTML="New Header";
+    </script>
+    <p>"old Header"已经修改为"New Header"</p>
+</body>
+</html>
