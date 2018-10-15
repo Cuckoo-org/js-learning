@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三种导入js的方式</title>
+</head>
+<body>
+    <h1>行内导入js元素（慎重使用，不建议使用）</h1>
+<div onclick="alert('对的，没错')">明天会更好</div>
+    <h2>内嵌式写入</h2>  
+<script>
+alert('hello,hello')
+</script>
+<h3>外链式写入</h3>
+<script src="import.js">
+ //真实项目中一般都会把css放在body的上面，而js放在body的末尾！（约定俗成的规范）
+     //body中编写的都是HTML标签，js很多时候需要操作这些元素，首先要保证元素加载成功，才可以在js中获取到（js放到结构之后加载，js放到body的末尾。）
+
+alert('mingming')//内嵌导入和外链导入不能合并到一起。如果当前是外链导入，那么在script脚本块当中编写的所有代码都不会执行。
+//1，写静态页面；
+//2，从UI设计师手中获取设计稿，用HTML，css写出静态页面；
+//3，用js写出一些用户交互效果。例如：点击某一个按钮，实现图片切换。js 中很常用的操作就是用来操作HTML标签的（DOM元素的）
+</script> 
+</body>
+</html>
