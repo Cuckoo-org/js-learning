@@ -155,3 +155,100 @@ typeof "object" ->"string"
 **'!!'**
 > 在一个叹号取反的基础上再取反，取两次反相当于没有做操作，但是已经把其它类型值转换为布尔类型了，和boolean是相同的效果
 ![Alt text](./1539597367878.png)
+------
+###字符串
+ > 在js中单引号和双引号包起来的都是字符串
+```javascript
+12 - >number
+'12' ->string
+'[12,23]' ->string
+```
+ 常用方法：
+ charAt  charCodeAt
+ substr  supstring slice
+ toUpperCase  toLowerCase
+ indexOf lastIndexOf
+ split
+ replace
+ match
+ ......
+
+------
+###number数字
+> 0 12 - 12 12.5,js中多增加了一个number类型的数据：'NaN' =>Not a  number
+> typeof NaN ->"number"
+
+
+**`NaN`**
+> Not a number:不是一个数，但是属于number类型
+> 
+> NaN == NaN : false,NaN和任何其它值都不相等
+
+**`isNaN()`**
+> 用来检测当前这个值是否是非有效数字，如果不是有效数字检测的结果是true，反之是有效数字则为false
+```javascript
+isNaN(0) ->false
+isNaN(NaN) ->true
+
+isNaN('12') ->false 当我们使用isNaN检测值的时候，检测的值不是number类型的，浏览器会默认把值转换为number类型，然后再去检测
+isNaN([]) ->false
+isNaN(true) ->false
+```
+
+**`number()`**
+> 把其它数据类型值转化为number类型值
+```javascript
+Number('12') ->12
+Number('12px') ->NaN  在使用Number转换的时候只要字符串中出现任何一个非有效数字字符，最后结果都是NaN
+
+Number(true) ->1
+Number(false) ->0
+
+Number(null) ->0
+Number(undefined) ->NaN
+
+Number([]) =>把引用数据类型转换成Number，首先需要把引用数据类型转为字符串(tostring),在把字符串转换为Number即可 例如：[] ->'''' ->0
+Number([12]) =>[12]->'12' '12'->12
+Number([12,23]) =>[12,23]->"12,23" ->NaN
+
+Number({}) =>NaN
+```
+
+**`parseInt()`**
+> 也是把其它数据类型值转换为number，和Number方法在处理字符串的时候有所区别
+```javascript
+Number('12px') ->NaN
+parseInt('12px') ->12
+parseInt('12px13') ->12  提取规则：从左至右依次查找有效数字字符，直到遇见非有效数字字符为止（不管后面是否还有，都不找了），把找到的转换为数字 
+Number('px12') ->NaN
+```
+
+**`parseFloat()`**
+> 在parseInt的基础上可以识别小数点
+``` javascript
+ parseInt('12.5px') ->12
+ parseFloat('12.5px') ->12.5
+```
+![Alt text](./1539610308242.png)
+
+------
+###null和undefined
+> null:空，没有
+> undefined：未定义，没有
+> 
+> ''：空字符串，没有
+> 0：也可以理解为没有
+
+`空字符串和null的区别`
+> 都是去种树
+> 空字符串属于挖了个坑，但是没有种任何东西
+> null是连坑都没挖
+> 
+> 空字符串相对于null来说开辟了内存，消耗了那么一丢丢性能
+
+`null和undefined的区别`
+>null一般都是暂时没有，预期中以后会有的（可能以后也没达到预期）：在JS中NULL一般都是手动先赋值
+>
+>undefined：完全没在预料之内的
+
+
