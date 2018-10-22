@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //->for in:用来遍历（循环）对象键值对的
+    var obj ={name:'铁甲小宝',age:8,1:'鲨鱼辣椒',2:'蝎子莱莱',3:'卡布达',2.5:'明明'
+    };
+    //=>var key;var attr(attribute);
+    //->对象中有多少键值对，我们的for in循环就遍历多少次（不一定的）
+    //->每一次循环key这个变量存储的都是当前循环这组键值对的属性名
+    //1，key存储的值都是字符串格式（不管属性名是否为数字）
+    //2，在for in循环遍历的时候，大部分浏览器都是把对象的键值对进行排序（把数字属性名排在前面，并且排列的时候按照数字由小到大排列）
+    //其次再把非数字的属性名按照之前编写的顺序排列，循环的时候按照重新排列的顺序依次遍历( 小数算作字母不算做数字)
+   // for(var key in obj){
+      //console.log( typeof key);=>"string"
+      //->key存储的是当前的属性名 'name'/'age'
+     // console.log(obj.key);//获取obj中key的这个属性对应的属性值->undefined <=>obj['key']
+   //console.log( obj[key]);//每一次循环把key变量存储的值（当前遍历的属性名）获取到中括号当中，获取obj中对应属性的属性值
+//    'key'：字符串key;
+//    key：变量key，代表存储的值
+// obj['key']  obj.key:属性名是key
+// obj[key]:属性名不是key 而是key变量存的值 }
+
+for(var key in obj){
+
+}
+
+
+   
+    </script>
+</body>
+</html>
