@@ -6,8 +6,11 @@ function queryCode(){
      for(var i=0;i<4;i++){
          var ran = Math.round(Math.random()*61);
          char=areaStr[ran];
-         //=>验证一下新获取到的char字符是否已经在result中存在了，如果存在了我们不存储，再重新获取一遍，反之则累加到result中
-         if(result.indexOf(char)>-1){
+         //=>A和a也算重复该如何处理？
+         //result="Ab""ab"
+         //char="a" "a"
+         //result.toLowerCase().indexOf(char.toLowerCase())===-1
+         if(result.toLowerCase(). indexOf(char.toLowerCase())>-1){
             i--; 
             continue;
          }
