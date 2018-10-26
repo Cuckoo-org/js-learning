@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+    </style>
+</head>
+<body>
+  <div id="box2" class="box">2</div>
+
+
+ <script>
+     //=>创建
+var oDiv = document.createElement('div');
+oDiv.id='div1';
+oDiv.className='box' ;
+//=>添加到页面中
+document.body.appendChild(oDiv)   
+    
+</script>   
+</body>
+</html>

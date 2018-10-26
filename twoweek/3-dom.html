@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--div#box$*3-->
+    <!-- <input type="text" name="box1"> -->
+    <div id="box1">01</div>
+    <div id="box2">02</div>
+    <div id="box1">03</div>
+
+    <script>
+//=>把当前页面中所有的ID叫做box1的都获取到
+ var allList = document.getElementsByTagName('*');
+         result=[];
+    for (var i=0;i<allList.length;i++){
+        var item =allList[i];
+        item.id==='box1'? result.push(item) :null;
+    }
+    console.log(result);
+    </script>
+</body>
+</html>

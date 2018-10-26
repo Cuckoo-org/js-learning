@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .box{
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                background: red;
+            }
+            </style>
+</head>
+<body>
+    <!--div.box#box${$}*2[TAB]-->
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <script>
+    var box1=document.getElementById('box1'),
+        box2=document.getElementById('box2');
+        box2.onclick=function(){
+            alert(2);
+        }
+        //->box1.parentNode.removeChild(box1)
+    </script>
+</body>
+</html>
