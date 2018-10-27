@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串操作</title>
+</head>
+<body>
+    <script>
+        //->字符串转换为数组
+        var a = 'qwerts';
+        a = a.split(''); 
+        console.log(a);
+        
+        //->转换成大写
+        var b = 'qwerts';
+        b = b.toUpperCase();
+        console.log(b);
+
+        //->截取字符串首字母
+        var a = 'qwerts';
+        a=a.substring(0,1);
+        console.log(a);
+
+        //->保留小数点后两位
+        function fixed(num){
+        return num.toFixed(2);
+}
+        alert(fixed(123123.889990000));
+
+        //时间
+        function show(){
+ var date = new Date();
+ var info = "现在是"+date.getFullYear()+"年";
+info += (date.getMonth()+1)+"月";
+info += (date.getDate())+"日晚上";
+info += date.getHours() + "点";
+info += date.getMinutes()+"分";
+info += date.getSeconds()+"秒";
+info += "（星期"+(date.getDay()+1)+"）";
+document.write(info);
+}
+show();
+//百度的
+
+
+//遍历出每一项的值
+var obj = {a:'x',c:'12',d:3, 1:'qwe'};
+for (var key in obj){
+    alert(obj);
+}
+console.log(key=1,obj);
+    </script>
+</body>
+</html>
