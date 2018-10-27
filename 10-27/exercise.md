@@ -45,6 +45,9 @@ var list = [1,,2,23,123,23,21,2]
 答：list.reverse()前后翻转数组。
 9，对数组从大到小排序
 答：list.sort()从小到大排列，这是可以给10以内的数字
+```js
+list.sort(function(a,b) {return a-b})
+```
 
 ## object
 ```js
