@@ -16,3 +16,5 @@ var arr = [1,2,3,4, [1,2,5,6, 'aa'], [1,2]]
 * every()
 * some()
 * reduce()和 reduceRight()
+
+[数组常用的方法](https://www.cnblogs.com/obel/p/7016414.html)
