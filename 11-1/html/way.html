@@ -50,5 +50,17 @@ function fn(num1,num2){
     var total = num1+num2;
     console.log(total);
 }
+//1,如何区分私有的和全局的
+//->在全局作用域下声明（预解释的时候）的变量是全局变量
+
+console.log(total);
+var total = 0;
+function fn(num1,num2){
+    console.log(total);
+    var total = num1 +num2;
+    console.log(total);
+}
+fn(100,200)
+console.log(total);
 </script>
 </html>
