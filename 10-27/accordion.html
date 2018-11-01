@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手风琴</title>
+    <style>
+    *{
+        margin: 0 0;
+    }
+    .box{
+        width: 1024px;
+        height: 420px;
+        background: pink;
+        margin: 80px auto;
+    }
+    .list li{
+        list-style: none;
+        float: left;
+        width: 180px;
+        height: 242px;
+    
+    }
+    .list li:nth-child(1){
+        background-image: url(images1/3OzE2Vdf.jpg) /*引入背景图片*/
+    }
+    .list li:nth-child(2){
+        background-image: url(images1/5dALeVDA.jpg)
+    }
+    .list li:nth-child(3){
+        background-image: url(images1/Bcr6Di61.jpg) 
+    }
+    .list li:nth-child(4){
+        background-image: url(images1/Fr6f6GHt.jpg) 
+    }
+    .list li:nth-child(5){
+        background-image: url(images1/okPHfEHk.jpg) 
+    }
+    .list li:nth-child(6){
+        background-image: url(images1/WA5EiKeS.jpg) 
+    }
+    .mask{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5)
+    }
+    .mask h3{
+        
+        font-size: 26px;
+        color: #fff;
+        font-weight: normal;
+        
+        
+    }
+    </style>
+</head>
+<body>
+    <div id="box">
+   <ul class="list">
+       <li>
+           <div class="mask">
+               <h3>松鼠松树</h3>
+           </div>
+       </li>
+       <li><div class="mask">
+            <h3>海岛酒店</h3>
+        </div>
+    </li></li>
+       <li><div class="mask">
+            <h3>青年旅社</h3>
+        </div>
+    </li></li>
+       <li><div class="mask">
+            <h3>大哥牛逼</h3>
+        </div>
+    </li></li>
+       <li><div class="mask">
+            <h3>沙漠海景</h3>
+        </div>
+    </li></li>
+       <li><div class="mask">
+            <h3>哈哈哈哈</h3>
+        </div>
+    </li></li>
+   </ul>
+
+    </div>
+</body>
+</html>

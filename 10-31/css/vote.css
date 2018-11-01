@@ -1,0 +1,11 @@
+.aBox h1{
+    margin: 50px 300px;
+    font-size: 30px;
+    font-weight: 600;
+    color: blue; 
+}
+.aBox p{
+    margin: 50px 300px;
+    border: 1px solid red;
+    
+}

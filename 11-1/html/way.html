@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一些操作方法</title>
+</head>
+<body>
+    <h1>迭代方法</h1>
+    <p>ECMAscript维数组定义了五个迭代方法，每个方法都接受两个参数，要在每一项上运行的函数的作用域对象-影响this的值</p>
+    <p>every()对数组的每一项运行给定函数，如果该函数对每一项都返回true，则返回true</p>
+    <p>filter()对数组中的每一项运行给定函数，返回该函数会返回true的项组成的数组。</p>
+    <p>forEach()对数组的每一项运行给定函数。这个方法没有返回值</p>
+    <p>map()对数组的每一项运行给定函数，返回每次函数调用的结果组成的数组。</p>
+    <p>some()对数组中的每一项运行给定函数，如果该函数对任一项返回true，则返回true</p>
+ 
+</body>
+<script>
+var numbers =[1,23,5,6,18,,4,1];
+ var everyResult= numbers.every(function(item,index,array){
+     return(item>2);
+ })
+ alert(everyResult);//->返回结果为false
+ var someResult=numbers.some(function(item,index,array){
+     return(item>2);
+ })
+ alert(someResult)//->返回结果为true
+ //->filter()函数
+ var numbers = [1,2,3,4,5,4,3,6,8];
+ var filterResult = numbers.filter(function(item,index,array){
+     return(item>2);
+ })
+ alert(filterResult)//->返回结果为3,4,5,4,3,6,8返回的是所有数值大于2的数组
+
+ //->map也返回一个数组
+  var numbers = [2,3,4,5,6,7,8,9]
+  var mapResult =numbers.map(function(item,index,array){
+      return item*2
+  });
+  alert(mapResult)//->返回结果是每一项*2，返回的是乘积的结果4,6,8,10,12,14,16,18
+
+
+  console.log(num);//->undefined
+var num = 12;
+console.log(num);
+var obj = {name:'橘子',age:3};
+fn(100,200);//->可以在上面执行，因为预解释的时候声明+定义就已经完成了。
+function fn(num1,num2){
+    var total = num1+num2;
+    console.log(total);
+}
+</script>
+</html>

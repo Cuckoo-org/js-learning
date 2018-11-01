@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
 var ary = [1,2,2,3,2,5,4,1,2,3,2,2,3,3,4,6,3,2,2]
 //=>ary.length-1:最后一项没有内容了，我们不需要再比较
 for(var i=0;i<ary.length-1;i++){
@@ -15,7 +15,7 @@ for(var i=0;i<ary.length-1;i++){
     }
 }
 console.log(ary); //->并没有完全去重
-=======
+
 var a = [1,15,1,2,3,5,1,13,17];
 
 var s = a.sort(function(a,b) {return a -b})
@@ -99,4 +99,4 @@ for(var i = 0; i<len;i++) {
     }
 }
 console.log(list);
->>>>>>> 0a280bcc88ddd86171ad357b4fbc661fe16db633
+ a280bcc88ddd86171ad357b4fbc661fe16db633

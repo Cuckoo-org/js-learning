@@ -11,7 +11,8 @@ function change(index){
     oDivList[index].className='select';
   }
   for(let i =0;i<oList.length;i++){
-    oList[i].onclick=function(){
-      change(i);
+    select.onclick=function(){
+      
+      return change(i);
     }
   }

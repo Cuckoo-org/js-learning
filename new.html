@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>.</div>
+    <script>
+     function jia(a,b){
+       var r=a+b;
+       return r;
+     }
+     function jian(a,b){
+         return a-b;
+     }
+     function cheng(a,b){
+         return a*b;
+     }
+     function chu(a,b){
+         return a/b;
+     }
+     var jia=(1+1);
+     console.log(jia);
+     var jian=(1,1);
+     console.log(jian);
+     var cheng =(2,6);
+     console.log(cheng);
+     var chu=(8/3);
+     console.log(chu);
+     var user={
+         name:'一只猪',
+         age:'6',
+         sex:'man',
+     }
+     console.log(user)
+     var name=prompt('你叫什么名字啊？');
+     console.log(name);
+
+     window.setTimeout(function(){
+         console.log('haha,三秒到了')
+     },3000);
+     var count=0;
+     var timer=setInterval(function(){
+         count++;
+         if(count>5){
+            clearInterval(timer);
+            return;
+         }   
+         
+         console.log('nice'+count)
+     },2000)
+ 
+    
+ 
+    </script>
+</body>
+</html>
