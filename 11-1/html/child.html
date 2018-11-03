@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>向已有元素添加新元素</title>
+    <!-- <script>
+    
+            //->调用一个函数执行发生改变
+            function changetext(id){
+                id.innnerHTML='一点也不好笑';
+            }
+            </script>
+            <h1 onclick="changetext(this)">点一下就会自杀</h1> -->
+</head>
+<body>
+    
+    
+    <h1 onclick="this.innerHTML='哈哈哈 搞笑吧！'">请点击这段文字它将发生改变</h1>
+    <div id="div1">
+        <p id="p1">这是一个段落</p>
+        <p id="p2">这是另一个段落</p>
+    </div>
+    <script>
+    var para=document.createElement("p");
+    var node=document.createTextNode("这是一个新的");
+    para.appendChild(node);
+    var element=document.getElementById('div1');
+    element.appendChild(para);
+    </script>
+
+<p>点击按钮执行<b>displayDate()</b></p>
+<button onclick="displayDate()">点一哈</button>
+<script>
+function displayDate(){
+    document.getElementById('demo').innerHTML=Date();
+}
+</script>
+<p id="demo"></p>
+</body>
+</html>

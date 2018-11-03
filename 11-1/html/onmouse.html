@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>onmouseover和onmouseout事件</title>
+</head>
+<body>
+    <!-- <div
+    onmouseover="mOver(this)"
+    onmouseout="mOut(this)"
+    style="background-color:red;width: 200px;height: 50px;padding-top: 25px;text-align: center;">
+    Mouse Over  Me
+    </div>
+
+    <script>
+    function mOver(obj)
+    {
+        obj.innerHTml="谢谢谢"
+    }
+
+    function mOut(obj)
+    {
+     obj.innerHTml="把鼠标移动到这"
+    }
+    </script> -->
+
+
+<!-- <div 
+onmouseover="mOver(this)" 
+onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:200px;height:50px;padding-top:25px;text-align:center;">
+Mouse Over Me
+</div>
+
+<script>
+function mOver(obj)
+{
+obj.innerHTML="谢谢你"
+}
+
+function mOut(obj)
+{
+obj.innerHTML="把鼠标指针移动到上面"
+}
+</script> -->
+
+<div 
+onmousedown="mDown(this)" 
+onmouseup="mUp(this)" 
+style="background-color:#D94A38;width:200px;height:50px;padding-top:25px;text-align:center;">
+点击这里
+</div>
+
+<script>
+function mDown(obj)
+{
+obj.style.backgroundColor="#1ec5e5";
+obj.innerHTML="松开鼠标"
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor="#D94A38";
+obj.innerHTML="谢谢你"
+}
+</script>
+</body>
+</html>
