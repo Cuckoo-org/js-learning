@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深入理解没有重载</title>
+</head>
+<body>
+    <script>
+    function addSomeNumber (num){
+        return num+100;
+    }
+    function addSomeNumber (num){
+        return num+200;
+    }
+    var result = addSomeNumber(100);
+    //result 结果为300，因为这个例子声明了两个同名函数，而结果是后面的函数覆盖掉了前面的函数。
+    </script>
+</body>
+</html>

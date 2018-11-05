@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>call(), apply() 和bind() 区别</title>
+</head>
+<body>
+    <script>
+    function yo(name,a,b,c){
+        console.log("yo,"+name+"我是"+this.name)
+    }
+    var whh ={
+        name:"王花花"
+    }
+    var lsd = {
+        name:"李栓蛋"
+    }
+    yo.call(whh,"赵可爽",1,2,3);
+    yo.apply(whh,["赵可爽",1,2,3]);
+    yo2 = yo.bind(whh);
+    yo2("赵可爽");
+    //yo.call(lsd,"刘备备",3,2,1);//->赋能的方式更改他们的this然后
+    //->call()与apply()是直接执行了前面的yo函数，可以指定执行的环境，传参进去。bind()会返回一个新的function(yo2(传递参数))
+    </script>
+</body>
+</html>

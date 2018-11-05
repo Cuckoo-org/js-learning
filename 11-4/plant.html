@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工厂模式以及构造函数</title>
+</head>
+<body>
+    <script>
+    // function createJsPerson(name,age){
+    //     var obj = {};
+    //      obj. name = name;
+    //      obj. age = age;
+    //      obj.writeJs = function(){
+    //          console.log("my name is"+this.name+"i can do it")
+    //      }
+    //      return obj;
+    // }
+    // var p1 = createJsPerson("巴啦啦",12);
+    // p1.writeJs();
+    function CreateJsPerson(name,age){
+//浏览器默认创建的对象就是我们的实例p1 ->this
+     //var obj = {};
+     this.name = name;//->p1.name = name
+     this.age = age;
+     this.writeJs = function(){
+       console.log("my name is"+this.name+"i can you can");
+    }
+    //浏览器再把创建的实例默认的进行返回
+}
+var p1 = new CreateJsPerson("哈哈哈",16);
+p1.writeJs();
+var p2 = new CreateJsPerson("啦啦啦",13);
+p2.writeJs();
+    
+    </script>
+</body>
+</html>
