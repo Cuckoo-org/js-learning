@@ -21,3 +21,7 @@ function call1(num1, num2){
     return sum.call(this, num1, num2);
     }
 bind是新创建一个函数，然后把它的上下文绑定到bind()括号中的参数上，然后将它返回。bind()后不会执行，只会返回一个改变了上下文的函数。
+
+## 使用事件委托写一个DOM拖拽（可以晚点完成）
+
+## 使用js写一个简单的动画
