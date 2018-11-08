@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//    var ary = [12,2,3,45,23,56,88];
+//    ary.sort(function(a,b){
+//        return(a-b);
+//    })
+//    var min = ary[0];
+//    var max = ary[ary.length-1];
+//    console.log(min,max)
+
+   var ary = [12,2,3,45,23,56,88];
+   var max = ary [0], min = ary[0];
+   for (var i = 1;i<ary.length;i++){
+       var cur = ary[i];
+       cur>max ? max = cur:null;
+       cur<min ? min = cur:null;
+   }
+     console.log(min,max);
+
+    var ary = [12,2,3,45,23,56,88];
+    var max =eval("Math.max("+ ary.toString()+")");
+    var min =eval("Math.min("+ ary.toString()+")");
+    console.log(min,max)
+
+     //->apply方法 求最大值，最小值。
+    var ary = [12,2,3,45,23,56,88];
+    var max = Math.max.apply(null,ary);
+    var min = Math.min.apply(null,ary);
+    console.log(min,max)
+
+
+    </script>
+</body>
+</html>
