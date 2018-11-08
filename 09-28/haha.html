@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构造函数</title>
+</head>
+<body>
+    <script>
+    // function Person(name,job,age){
+    //     this.name = name;
+    //     this.job = job;
+    //     Person.prototype.age = function(){
+    //         console.log('我叫'+this.name+"我的职业是"+this.job+"我今年"+age)
+    //     }
+    // }
+    // var p = new Person("木哈哈","中单",12)
+    // console.log(p.age())
+    // var i = new Person("蓝精灵","ADC",17)
+    // i.age();
+
+
+    var a =  Object.create({
+        a:2,
+        b:3,
+        c:4
+    })
+    console.log(a)
+
+//->继承链关系
+function Grandpa(color,weight){
+       this.color = color;
+       this.weight = weight;
+}
+Grandpa.prototype.eat= function(){
+        console.log("哧溜哧溜")
+    };
+Grandpa.prototype.sleep= function(){
+        console.log("zzz")
+    };
+// var a = new Grandpa("blue",120);
+// console.log(a,);
+
+function Father(color,weight){
+    Grandpa.call(this,color,weight)
+};
+Father.prototype = Object.create(Grandpa.prototype);
+Father.prototype.constructor = Father;
+Father.prototype.play = function(){
+    console.log("yumaoqiu")
+}
+var f = new Father("green",100);
+console.log(f);
+// var f = new Father();
+// console.log(f)
+function Child(color,weight) {
+    Father.call(this,color,weight)
+};
+Child.prototype = Object.create(Father.prototype);
+Child.prototype.constructor = Child;
+Child.prototype.study = function(){
+    console.log("写作业")
+};
+var c = new Child("red",88);
+var d = new Child("red",60);
+console.log(c,d)
+    
+    </script>
+</body>
+</html>
