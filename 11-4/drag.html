@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽</title>
+    <style>
+    body{
+        padding: 0;
+        margin:0;
+        user-select: none;
+    }
+    .wrap{
+        position: relative;/*相对定位  监管绝对定位*/
+        width: 300px;
+        height: 40px;
+        margin:50px auto;
+        background: #e8e8e8;
+        line-height: 40px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .bg{
+        width: 0;
+        height: 100%;
+        background: green;
+    }
+    .rect{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+    }
+    .slide{
+        box-sizing: border-box;/*怪异盒模型*/
+        position: absolute;/*绝对定位*/
+        left:0;
+        top:0;
+        width: 45px;
+        height: 40px;
+        border:1px solid #ccc;
+        background:#fff;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="bg"></div>
+        <div class="rect">拖动滑块认证
+            <div class="slide">
+                <img src="images/TRR%JTU@6(%R7]%7_1PQ4]T.png">
+            </div>
+        </div>
+    </div>
+    <script>
+        //->document.querySelector ->在 JS中获取一个元素
+        var oSlide = document.querySelector(".slide");
+        var oBg = document.querySelector(".bg");
+        var oRect = document.querySelector(".rect");
+        var oImages = document.querySelector(".slide img");
+        var left = 0;//-> 全局变量
+        oSlide.onmousedown = function(e){//->鼠标按下事件，执行函数
+            var initX = e.clientX;
+           document.onmousemove = function(e){
+            var moveX = e.clientX//->鼠标移动后的坐标
+             left = moveX - initX;
+            //->判断左边边界；
+            if(left<0){
+                left = 0;
+            };
+            //->判断右边边界
+            if(left>300-45){
+              left = 300-45;
+            }
+            oBg.style.width = left + "px";//->给背景设置宽度
+            oSlide.style.left = left +"px";//->给css设置样式 
+            if(left >= 300-45 ){
+               oRect.style.color = "blue";//->改变字体颜色
+            //    oRect.innerHTML = "可以了";//->改变文字
+            oImages.src = "images/9T$TZHG7((VBU`}{SQ]OOYB.png"
+            }
+           }
+        }
+        //->鼠标抬起事件
+       document.onmouseup = function(){
+        document.onmousemove = null;//->清楚鼠标move事件
+        if(left<300-45){
+            oBg.style.width = 0;
+            oSlide.style.left = 0
+        }
+        }
+        
+    </script>
+</body>
+</html>
