@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javaScript事件</title>
+    <style>
+    .div{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        text-align: center;
+    }
+    </style>
+</head>
+<body onload="load()" onunload="checkLeave()">
+    <div class="div" onmouseover="onOver(this)" onmouseout="onOut(this)"></div>
+    <script>
+        //->鼠标经过事件
+    function onOver(ooj){
+        ooj.style.background = "red";
+    };
+    function onOut(ooj){
+        ooj.innerHTML = "你好吗？"
+    }
+    </script>
+
+     <form>
+    <input type="text" onchange="onChangeDemo(this)">
+    <script>
+        //->内容改变事件
+    function onChangeDemo(oTxt){
+        alert("这个内容改变了")
+    }
+    </script>
+
+    <form>
+        <!-- <input type="text" onchange="alert('内容也会改变啦')">也能改变 -->
+
+        <input type="text" onselect="onChange(this)" onfocus="onChange1(this)" onblur="onBlur(this)">
+        <script>
+            //->文本框选中事件
+        function onChange(bg){
+            bg.style.background= "red"
+        }
+        //->光标聚集事件
+        function onChange1(bg){
+            bg.style.background = "green";
+        }
+        //->移开光标事件
+        function onBlur(bg){
+            bg.style.background = "yellow"
+        }
+        //->网页加载事件，给body添加onload
+        function load(){
+            alert("网页加载完毕")
+        }
+        // //->网页关闭事件
+        // function checkLeave(){
+        // alert("你要离开吗？")
+        // }
+        </script>
+    </form>
+    </form>
+
+    
+</body>
+</html>
