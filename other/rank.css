@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    -webkit-user-select: none;
+}
+.box{
+    width: 400px;
+    padding: 20px;
+    margin: 30px auto;
+    border: 1px solid green;
+
+    /* 实现圆角 */
+    border-radius: 10px;
+    /* 阴影 */
+    box-shadow:3px 3px 10px 0 gray;
+}
+.box thead{
+    background: green;
+    color: aliceblue;
+
+}
+.box thead tr{
+    height: 35px;
+}
+.box thead tr th{
+    width: 100px;
+    text-align: center;
+}
+.box thead tr th.cursor{
+    cursor: pointer;
+}
+.box tbody tr{
+    height: 30px;
+}
+.box tbody tr.bg{
+    background:lightgreen;
+}
+
+.box tbody tr td{
+    width: 100px;
+    text-align: center;
+}
