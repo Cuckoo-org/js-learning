@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.h1{
+    text-align: center;
+    font-weight: bold;
+    float: left;
+}
+.button{
+    display: inline-block;
+    margin: 0 2px;
+    outline: none;
+}
+ .box1{
+   width: 100%;
+   height: 60px;
+   background: #343434;
+}
+.tab {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+.tab li{
+    float: left;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+.tab li a{
+ 
+    padding: 3px  35px;
+    color: #aaa;
+    line-height: 55px;
+    display: block;
+}
+.tab li a:hover {
+    background: green;
+    color: #fff;
+    /* text-decoration: underline;//->鼠标滑上出现下划线 */
+}
+

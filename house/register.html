@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .form{
+             text-align: center;
+             margin: 45px 400px;
+             background-color: beige;
+        }
+        .content input{
+            border: 1px solid black;
+        }
+        .content input:focus{
+            /* background-color: blue; */
+            border: 1px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form">
+    <h1>用户登录</h1>
+    <div class="content">
+        <form method="post" action="">
+            <div class="frm_cont userName">
+                <label for="userName">用户名：</label>
+                <input type="text" id="userName"/>
+            </div>
+
+    <div class="frm_cont userPsw">
+            <label for="userPsw">密 码：</label>
+            <input type="password" id="userPsw"/>
+    </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
