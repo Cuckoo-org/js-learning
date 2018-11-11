@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /\s/;//->s 匹配空格、换行、制表图
+    console.log(reg.test("      "));
+    var reg1 = /\S///->S 除了制表图、换行、空格其它的都能匹配到
+    console.log(reg1.test("12ad^"))
+    </script>
+</body>
+</html>
