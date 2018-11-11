@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /yo+/;//->匹配字符yo一次或者多次
+    console.log(reg.test("yoooo"))//->true
+
+    var reg1 = /[yY][oO]+/;//->匹配大小写。[]也代表字符，里面代表Oo，Yy可以出现一次或者多次,"+"代表出现一次或者多次,。
+    console.log(reg1.test("yYoOO"));//->true
+    
+    var reg2 = /[yY][oO]+[!~\.]*/;//->匹配大小写。[]也代表字符，里面代表Oo，Yy可以出现一次或者多次，还有其他字符~！
+    console.log(reg2.test("yYoOO！~~~."));//->true
+
+    var reg3 = /[yY][oO]+p?[!~\.]*/;//-> ？代表匹配P出现零次或者一次
+    console.log(reg2.test("yYoOOp！~~~."));//->true
+     //-> "{a,b}" 代表重复的范围
+    var reg4 = /yo{2,4}/;//->重复a~b次
+    console.log(reg4.test("yoooo"))//->true
+
+
+    var reg5 = /yo{2,4}/;//->重复a~b次 不足a不匹配
+    console.log(reg5.test("yo"))//->false
+
+    var reg6 = /yo{2,}/;//->出现两次以上不足不匹配
+    console.log(reg6.test("yooo"))//->true
+    </script>
+</body>
+</html>
