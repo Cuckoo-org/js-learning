@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /\d/;//->d 只会匹配阿拉伯数字
+    console.log(reg.test("1234567890asdfg"))
+    var reg1 = /\d\.\d/;//->匹配小数，\ 后的.可以匹配到
+    console.log(reg.exec("3,14"))
+
+    var reg2 = /\D///->D 匹配不是数字的字符
+    console.log(reg2.exec("#$^ss"))
+    </script>
+</body>
+</html>
