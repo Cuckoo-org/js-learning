@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /[abc]/;//->只匹配[]里面的字符
+    console.log(reg.exec("123abcd"))
+    var reg1 = /[a-z]/;//->匹配小写a-z的字符 //->相同匹配大写A-Z
+    console.log(reg1.test("asdfghjklzxcvbnmqwertyuiop"))
+
+    var reg2 = /[\u4e00-\u9f5a]/;//->匹配中文，u4e00代表十进制19968，u9f5a代表十进制40794
+    console.log(reg2.test("123哈哈"))
+    </script>
+</body>
+</html>
