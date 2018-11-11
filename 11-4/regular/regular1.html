@@ -11,6 +11,9 @@
     var reg = /\w/;//->w 匹配所有的阿拉伯数字和字母大小写还有"_"
     //->捕获到了exec下面所有的字符
     console.log(reg.exec("123456789qwertyuiopasdfghjklzxcvbnmZXCVBNMASDFGHJKLQWERTYUIOP_"))
+
+    var reg1 = /\W/;//->W 匹配w匹配不了的字符
+    console.log(reg1.exec("#*$&^.*@"))
     </script>
 </body>
 </html>
