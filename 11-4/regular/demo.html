@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //->一个18~68之间的正则 先划分为三个阶段 18-19 20-59 60-68
+
+    var reg = /^(1[8-9]|[2-5]\d|6[0-8])$/;
+    console.log(reg.test("65"));//->true
+
+    //->验证邮箱的正则
+    var reg = /^[\w.-]+@[0-9a-zA-Z]+(\.[a-zA-Z]{2,4}){1,2}$/;
+    console.log(reg.test("1231456que@163.com.cn"))//->true
+
+    //->简单的身份证号码正则
+    // var reg = /^\d{17}\d|X$/;
+    var reg = /^\d{2}\d{4}\d{4}\d{2}\d{2}\d{2}\d(\d|X)$/;
+    console.log(reg.test("12345678912345678X"))//->true
+
+    </script>
+</body>
+</html>
