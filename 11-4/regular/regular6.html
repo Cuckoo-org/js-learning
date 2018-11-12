@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /(.+)飞飞，(.+)追追/;//->分组匹配
+    console.log(reg.test("王花花飞飞，李栓蛋追追"));//->true
+
+    var reg1 = /1(?:[37|38|82])\d{4}(\d{4})/;//->分组匹配但不捕获（?:）
+    console.log(reg1.exec("13745678923 13845678925 18245688936 17745678912 13145678925"))
+    
+    </script>
+</body>
+</html>
