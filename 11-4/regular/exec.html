@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /\d+/g;//->不要忘记加g 不加g会只从零获取
+    var str = "chang2016lu2017manman2018";
+    var ary = [];
+    var res = reg.exec(str);
+    while(res){
+        ary.push(res[0]);
+        res = reg.exec(str);
+    }
+    console.log(str);
+
+
+    var reg1 = /\d+?/g;//->解决贪婪性
+    var str = "haha2018lalala2019";
+    // console.log(reg1.exec(str))//->2
+    var ary = [],res = reg1.exec(str);
+    while(res){
+        ary.push(res[0]);
+        res = reg1.exec(str)
+    }
+    console.log(ary);
+
+     var reg2 = /\d+?/g;
+    var str = "haha2018lalala2019";
+    var ary = str.match(reg2);//->match方法方便
+    console.log(ary);
+    </script>
+</body>
+</html>
