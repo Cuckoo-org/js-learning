@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /haha(\d+)/g;
+    var str = "haha123haha456haha789";//->用exec执行三次不仅把大正则捕获到，而且还可以获取到第一个分组的内容
+    console.log(reg.exec(str));//->["haha123", "123",
+    console.log(reg.exec(str));//->["haha456", "456",
+    console.log(reg.exec(str));//->["haha789", "789",
+       //->match只能捕获到大正则匹配的内容
+    console.log(str.match(reg))//-> ["haha123", "haha456", "haha789"]
+
+    </script>
+</body>
+</html>
