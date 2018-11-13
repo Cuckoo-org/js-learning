@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var reg = /^(\w)\1(\w)\2$/;//-> \1代表出现和第一个分组一模一样的内容，\2指的是出现和第二个分组一模一样的内容
+    console.log(reg.test('hhff'))
+    console.log(reg.test('z0f_'));//->false
+    </script>
+</body>
+</html>
